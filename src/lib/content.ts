@@ -95,6 +95,31 @@ Gelecek, cesur adımlar atanların olacaktır.`,
         comprehensiveSupport: "Kapsamlı Destek",
       },
     },
+    aboutPage: {
+      heroSubtitle: "Geleceğin liderlerini yetiştiren, İngiltere'nin en prestijli eğitim kurumlarına giden yolda rehberlik eden uzman ekibiz.",
+      features: {
+        expertTeam: {
+          title: "Uzman Ekip",
+          description: "Oxford ve Cambridge mezunu uzmanlar",
+        },
+        officialRepresentative: {
+          title: "Resmi Temsilci", 
+          description: "UK Eğitim Bakanlığı ve British Council",
+        },
+        globalVision: {
+          title: "Küresel Vizyon",
+          description: "Daha iyi bir dünya inşa etme misyonu",
+        },
+        comprehensiveSupport: {
+          title: "Kapsamlı Destek",
+          description: "Başvurudan mezuniyete kadar",
+        },
+      },
+      teamSection: {
+        buttonText: "Ekibimizle Tanışın",
+      },
+      partnersTitle: "Resmi Ortaklarımız",
+    },
     services: {
       title: "INSPIRE - Mükemmelliğe Giden Yolunuz",
       subtitle: "Her harfi anlamlı ve net bir hizmet dizisi",
@@ -553,6 +578,31 @@ The future belongs to those who dare to take brave steps.`,
         globalNetwork: "Global Network",
         comprehensiveSupport: "Comprehensive Support",
       },
+    },
+    aboutPage: {
+      heroSubtitle: "We are the expert team that nurtures future leaders, guiding students on their path to the UK's most prestigious educational institutions.",
+      features: {
+        expertTeam: {
+          title: "Expert Team",
+          description: "Oxford and Cambridge graduate experts",
+        },
+        officialRepresentative: {
+          title: "Official Representative", 
+          description: "UK Department for Education & British Council",
+        },
+        globalVision: {
+          title: "Global Vision",
+          description: "Mission to build a better world",
+        },
+        comprehensiveSupport: {
+          title: "Comprehensive Support",
+          description: "From application to graduation",
+        },
+      },
+      teamSection: {
+        buttonText: "Meet Our Team",
+      },
+      partnersTitle: "Our Official Partners",
     },
     services: {
       title: "INSPIRE - Your Pathway to Excellence",

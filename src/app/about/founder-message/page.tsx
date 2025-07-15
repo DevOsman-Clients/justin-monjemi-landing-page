@@ -2,7 +2,6 @@
 
 import { useLanguage } from "@/contexts/LanguageContext"
 import { SITE_CONTENT } from "@/lib/content"
-import { PLACEHOLDER_IMAGES } from "@/lib/images"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Quote } from "lucide-react"
@@ -38,7 +37,7 @@ export default function FounderMessagePage() {
                 <CardContent className="p-8 text-center">
                   <div className="relative w-48 h-48 mx-auto mb-6">
                     <Image
-                      src={PLACEHOLDER_IMAGES.founder || "/placeholder.svg"}
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
                       alt="Justin Monajemi"
                       fill
                       className="rounded-full object-cover"

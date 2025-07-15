@@ -23,9 +23,7 @@ export default function AboutPage() {
                 {content.about.whoWeAre.title}
               </h1>
               <p className="text-xl text-blue-100 leading-relaxed">
-                {language === "tr"
-                  ? "Geleceğin liderlerini yetiştiren, İngiltere'nin en prestijli eğitim kurumlarına giden yolda rehberlik eden uzman ekibiz."
-                  : "We are the expert team that nurtures future leaders, guiding students on their path to the UK's most prestigious educational institutions."}
+                {content.aboutPage.heroSubtitle}
               </p>
             </div>
             <div className="relative">
@@ -69,12 +67,10 @@ export default function AboutPage() {
                   <Users className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-[#032445] mb-2">
-                  {language === "tr" ? "Uzman Ekip" : "Expert Team"}
+                  {content.aboutPage.features.expertTeam.title}
                 </h3>
                 <p className="text-gray-600">
-                  {language === "tr"
-                    ? "Oxford ve Cambridge mezunu uzmanlar"
-                    : "Oxford and Cambridge graduate experts"}
+                  {content.aboutPage.features.expertTeam.description}
                 </p>
               </CardContent>
             </Card>
@@ -85,14 +81,10 @@ export default function AboutPage() {
                   <Award className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-[#032445] mb-2">
-                  {language === "tr"
-                    ? "Resmi Temsilci"
-                    : "Official Representative"}
+                  {content.aboutPage.features.officialRepresentative.title}
                 </h3>
                 <p className="text-gray-600">
-                  {language === "tr"
-                    ? "UK Eğitim Bakanlığı ve British Council"
-                    : "UK Department for Education & British Council"}
+                  {content.aboutPage.features.officialRepresentative.description}
                 </p>
               </CardContent>
             </Card>
@@ -103,12 +95,10 @@ export default function AboutPage() {
                   <Globe className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-[#032445] mb-2">
-                  {language === "tr" ? "Küresel Vizyon" : "Global Vision"}
+                  {content.aboutPage.features.globalVision.title}
                 </h3>
                 <p className="text-gray-600">
-                  {language === "tr"
-                    ? "Daha iyi bir dünya inşa etme misyonu"
-                    : "Mission to build a better world"}
+                  {content.aboutPage.features.globalVision.description}
                 </p>
               </CardContent>
             </Card>
@@ -119,14 +109,10 @@ export default function AboutPage() {
                   <BookOpen className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-[#032445] mb-2">
-                  {language === "tr"
-                    ? "Kapsamlı Destek"
-                    : "Comprehensive Support"}
+                  {content.aboutPage.features.comprehensiveSupport.title}
                 </h3>
                 <p className="text-gray-600">
-                  {language === "tr"
-                    ? "Başvurudan mezuniyete kadar"
-                    : "From application to graduation"}
+                  {content.aboutPage.features.comprehensiveSupport.description}
                 </p>
               </CardContent>
             </Card>
@@ -155,7 +141,7 @@ export default function AboutPage() {
                   ))}
               </div>
               <Button className="bg-[#D29D33] hover:bg-[#b8851f] text-white px-8 py-3 rounded-lg mt-6">
-                {language === "tr" ? "Ekibimizle Tanışın" : "Meet Our Team"}
+                {content.aboutPage.teamSection.buttonText}
               </Button>
             </div>
             <div className="relative">
@@ -175,7 +161,7 @@ export default function AboutPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h3 className="text-2xl font-bold text-center text-[#032445] mb-12">
-            {language === "tr" ? "Resmi Ortaklarımız" : "Our Official Partners"}
+            {content.aboutPage.partnersTitle}
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-70">
             {[
