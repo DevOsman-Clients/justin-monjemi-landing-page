@@ -57,7 +57,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Key Features */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -123,7 +122,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Team Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -160,28 +158,33 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Partner Logos */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h3 className="text-2xl font-bold text-center text-[#032445] mb-12">
             {content.aboutPage.partnersTitle}
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-70">
+          <div className="flex justify-between items-center max-w-4xl mx-auto">
             {[
-              { name: "UK Department for Education", width: 120 },
-              { name: "British Council", width: 100 },
-              { name: "University of Oxford", width: 80 },
-              { name: "University of Cambridge", width: 80 },
-              { name: "Imperial College London", width: 100 },
-              { name: "UCL", width: 80 },
+              {
+                name: "UK Department for Education",
+                image: "/uk-department-edu.png",
+              },
+              { name: "British Council", image: "/british-council.png" },
+              {
+                name: "Russell Group Universities",
+                image: "/russell-group.png",
+              },
             ].map((partner, index) => (
-              <div key={index} className="flex justify-center">
+              <div
+                key={index}
+                className="flex justify-center items-center w-[180px] h-[120px]"
+              >
                 <Image
-                  src={`/placeholder.svg?height=60&width=${partner.width}`}
+                  src={partner.image}
                   alt={partner.name}
-                  width={partner.width}
-                  height={60}
-                  className="grayscale hover:grayscale-0 transition-all duration-300"
+                  width={180}
+                  height={120}
+                  className="max-w-full max-h-full object-contain transition-all duration-300"
                 />
               </div>
             ))}

@@ -68,7 +68,6 @@ Gelecek, cesur adımlar atanların olacaktır.`,
           "İngiltere Milli Eğitim Bakanlığı, British Council ve Russell Group üniversitelerinin resmi temsilcisi olarak, öğrencilerimizi en yüksek standartlarda eğitim kurumlarına hazırlarız.",
       },
       partners: {
-        title: "Resmi Ortaklarımız",
         items: [
           {
             name: "İngiltere Milli Eğitim Bakanlığı",
@@ -119,7 +118,7 @@ Gelecek, cesur adımlar atanların olacaktır.`,
       teamSection: {
         buttonText: "Ekibimizle Tanışın",
       },
-      partnersTitle: "Resmi Ortaklarımız",
+      partnersTitle: "Biz Kimiz",
     },
     services: {
       title: "INSPIRE - Mükemmelliğe Giden Yolunuz",
@@ -292,37 +291,22 @@ Gelecek, cesur adımlar atanların olacaktır.`,
         {
           name: "Oxford Üniversitesi",
           location: "Oxford",
-          image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop&auto=format",
+          image: "/oxford-logo.jpg",
         },
         {
           name: "Cambridge Üniversitesi",
           location: "Cambridge",
-          image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop&auto=format",
+          image: "/cambridge-logo.jpg",
         },
         {
           name: "Imperial College London",
           location: "London",
-          image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop&auto=format",
+          image: "/imperial-logo.jpg",
         },
         {
           name: "University College London",
           location: "London",
-          image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop&auto=format",
-        },
-        {
-          name: "King's College London",
-          location: "London",
-          image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop&auto=format",
-        },
-        {
-          name: "London School of Economics",
-          location: "London",
-          image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop&auto=format",
-        },
-        {
-          name: "University of Edinburgh",
-          location: "Edinburgh",
-          image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop&auto=format",
+          image: "/ucl-logo.jpg",
         },
       ],
     },
@@ -332,17 +316,17 @@ Gelecek, cesur adımlar atanların olacaktır.`,
         {
           title: "Akademik Mükemmellik",
           description: "Oxford ve Cambridge mezunu uzman kadromuz",
-          image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=250&fit=crop&auto=format",
+          image: "/pic-1.jpg",
         },
         {
           title: "Kişisel Gelişim",
           description: "Her öğrenciye özel rehberlik programı",
-          image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=300&h=250&fit=crop&auto=format",
+          image: "/pic-2.jpg",
         },
         {
           title: "Kariyer Rehberliği",
           description: "Mezuniyet sonrası kariyer planlaması",
-          image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=300&h=250&fit=crop&auto=format",
+          image: "/pic-3.jpg",
         },
       ],
     },
@@ -366,21 +350,21 @@ Gelecek, cesur adımlar atanların olacaktır.`,
           university: "Oxford Üniversitesi",
           quote:
             "Justin Monajemi ekibi sayesinde Oxford Tıp Fakültesi'ne kabul aldım. Profesyonel rehberlik ve sürekli destek için çok minnettarım.",
-          image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
+          image: "/student-1-testimonial.jpg",
         },
         {
           name: "Mehmet Kaya",
           university: "Cambridge Üniversitesi",
           quote:
             "Cambridge Mühendislik bölümüne kabul almak hayalimdi. Ekibin uzman rehberliği ile bu hayalimi gerçekleştirdim.",
-          image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+          image: "/student-2-testimonial.jpg",
         },
         {
           name: "Zeynep Özkan",
           university: "Imperial College London",
           quote:
             "STEM alanında kariyer yapmak istiyordum. Ekip bana en uygun programı buldu ve başvuru sürecinde destekledi.",
-          image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+          image: "/student-3-testimonial.jpg",
         },
       ],
     },
@@ -522,7 +506,6 @@ The future belongs to those who dare to take brave steps.`,
           "As the official representative of the UK Department for Education, British Council, and Russell Group universities, we prepare our students for the highest standard educational institutions.",
       },
       partners: {
-        title: "Our Official Partners",
         items: [
           {
             name: "UK Department for Education",
@@ -573,7 +556,7 @@ The future belongs to those who dare to take brave steps.`,
       teamSection: {
         buttonText: "Meet Our Team",
       },
-      partnersTitle: "Our Official Partners",
+      partnersTitle: "Who We Are",
     },
     services: {
       title: "INSPIRE - Your Pathway to Excellence",
@@ -747,38 +730,23 @@ The future belongs to those who dare to take brave steps.`,
         {
           name: "University of Oxford",
           location: "Oxford",
-          image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop&auto=format",
+          image: "/oxford-logo.jpg",
         },
         {
           name: "University of Cambridge",
           location: "Cambridge",
-          image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop&auto=format",
+          image: "/cambridge-logo.jpg",
         },
         {
           name: "Imperial College London",
           location: "London",
-          image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop&auto=format",
+          image: "/imperial-logo.jpg",
         },
         {
           name: "University College London",
           location: "London",
-          image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop&auto=format",
-        },
-        {
-          name: "King's College London",
-          location: "London",
-          image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop&auto=format",
-        },
-        {
-          name: "London School of Economics",
-          location: "London",
-          image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop&auto=format",
-        },
-        {
-          name: "University of Edinburgh",
-          location: "Edinburgh",
-          image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop&auto=format",
-        },
+          image: "/ucl-logo.jpg",
+        }
       ],
     },
     leadership: {
@@ -787,17 +755,17 @@ The future belongs to those who dare to take brave steps.`,
         {
           title: "Academic Excellence",
           description: "Expert team of Oxford and Cambridge graduates",
-          image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=250&fit=crop&auto=format",
+          image: "/pic-1.jpg",
         },
         {
           title: "Personal Development",
           description: "Personalized guidance program for each student",
-          image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=300&h=250&fit=crop&auto=format",
+          image: "/pic-2.jpg", 
         },
         {
           title: "Career Guidance",
           description: "Post-graduation career planning",
-          image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=300&h=250&fit=crop&auto=format",
+          image: "/pic-3.jpg",
         },
       ],
     },
@@ -820,21 +788,21 @@ The future belongs to those who dare to take brave steps.`,
           university: "University of Oxford",
           quote:
             "Thanks to the Justin Monajemi team, I was accepted to Oxford Medical School. I'm very grateful for their professional guidance and continuous support.",
-          image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
+          image: "/student-1-testimonial.jpg",
         },
         {
           name: "Mehmet Kaya",
           university: "University of Cambridge",
           quote:
             "Getting into Cambridge Engineering was my dream. With the team's expert guidance, I made this dream come true.",
-          image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+          image: "/student-2-testimonial.jpg",
         },
         {
           name: "Zeynep Özkan",
           university: "Imperial College London",
           quote:
             "I wanted to pursue a career in STEM. The team found the most suitable program for me and supported me through the application process.",
-          image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+          image: "/student-3-testimonial.jpg",
         },
       ],
     },

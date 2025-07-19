@@ -1,52 +1,66 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import { useLanguage } from "@/contexts/LanguageContext"
-import { SITE_CONTENT } from "@/lib/content"
-import { Award, Users, Globe, BookOpen, ArrowRight, ChevronLeft, ChevronRight, Quote } from "lucide-react"
-import { useState, useEffect, useCallback } from "react"
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { SITE_CONTENT } from "@/lib/content";
+import {
+  Award,
+  Users,
+  Globe,
+  BookOpen,
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Quote,
+} from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
 
 export default function HomePage() {
-  const { language } = useLanguage()
-  const t = SITE_CONTENT[language]
-  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0)
-  const [isTransitioning, setIsTransitioning] = useState(false)
+  const { language } = useLanguage();
+  const t = SITE_CONTENT[language];
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const nextTestimonial = useCallback(() => {
-    if (isTransitioning) return
-    setIsTransitioning(true)
+    if (isTransitioning) return;
+    setIsTransitioning(true);
     setTimeout(() => {
-      setCurrentTestimonialIndex((prev) => (prev + 1) % t.testimonials.items.length)
-      setIsTransitioning(false)
-    }, 300)
-  }, [isTransitioning, t.testimonials.items.length])
+      setCurrentTestimonialIndex(
+        (prev) => (prev + 1) % t.testimonials.items.length
+      );
+      setIsTransitioning(false);
+    }, 300);
+  }, [isTransitioning, t.testimonials.items.length]);
 
   const prevTestimonial = () => {
-    if (isTransitioning) return
-    setIsTransitioning(true)
+    if (isTransitioning) return;
+    setIsTransitioning(true);
     setTimeout(() => {
-      setCurrentTestimonialIndex((prev) => (prev - 1 + t.testimonials.items.length) % t.testimonials.items.length)
-      setIsTransitioning(false)
-    }, 300)
-  }
+      setCurrentTestimonialIndex(
+        (prev) =>
+          (prev - 1 + t.testimonials.items.length) % t.testimonials.items.length
+      );
+      setIsTransitioning(false);
+    }, 300);
+  };
 
   const goToSlide = (index: number) => {
-    if (isTransitioning || index === currentTestimonialIndex) return
-    setIsTransitioning(true)
+    if (isTransitioning || index === currentTestimonialIndex) return;
+    setIsTransitioning(true);
     setTimeout(() => {
-      setCurrentTestimonialIndex(index)
-      setIsTransitioning(false)
-    }, 300)
-  }
+      setCurrentTestimonialIndex(index);
+      setIsTransitioning(false);
+    }, 300);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      nextTestimonial()
-    }, 6000)
+      nextTestimonial();
+    }, 6000);
 
-    return () => clearInterval(interval)
-  }, [nextTestimonial])
+    return () => clearInterval(interval);
+  }, [nextTestimonial]);
 
   return (
     <div className="min-h-screen bg-white">
@@ -59,10 +73,7 @@ export default function HomePage() {
           loop
           playsInline
         >
-          <source
-            src="/home-page-hero.mp4"
-            type="video/mp4"
-          />
+          <source src="/home-page-hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black/40"></div>
@@ -83,6 +94,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Who We Are Section */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-20">
@@ -95,55 +107,68 @@ export default function HomePage() {
           </div>
 
           <div className="mb-16 md:mb-20">
-            <h3 className="text-xl md:text-2xl font-bold text-center text-[#032445] mb-8 md:mb-12">
-              {t.homepage.partners.title}
-            </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
               <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-gray-100 text-center">
-                <Image
-                  src="/placeholder.svg?height=80&width=120"
-                  alt="UK Department for Education"
-                  width={120}
-                  height={80}
-                  className="mx-auto mb-4 md:mb-6"
-                />
+                <div className="w-[220px] h-[220px] mx-auto mb-4 md:mb-6 flex items-center justify-center">
+                  <Image
+                    src="/uk-department-edu.png"
+                    alt="UK Department for Education"
+                    width={220}
+                    height={220}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
                 <h4 className="font-bold text-[#032445] mb-2 md:mb-3 text-base md:text-lg">
                   {t.homepage.partners.items[0].name}
                 </h4>
-                <p className="text-gray-600 font-medium text-sm md:text-base">{t.homepage.partners.items[0].role}</p>
+                <p className="text-gray-600 font-medium text-sm md:text-base">
+                  {t.homepage.partners.items[0].role}
+                </p>
               </div>
 
               <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-gray-100 text-center">
-                <Image
-                  src="/placeholder.svg?height=80&width=120"
-                  alt="British Council"
-                  width={120}
-                  height={80}
-                  className="mx-auto mb-4 md:mb-6"
-                />
-                <h4 className="font-bold text-[#032445] mb-2 md:mb-3 text-base md:text-lg">British Council</h4>
-                <p className="text-gray-600 font-medium text-sm md:text-base">{t.homepage.partners.items[1].role}</p>
+                <div className="w-[220px] h-[220px] mx-auto mb-4 md:mb-6 flex items-center justify-center">
+                  <Image
+                    src="/british-council.png"
+                    alt="British Council"
+                    width={220}
+                    height={220}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <h4 className="font-bold text-[#032445] mb-2 md:mb-3 text-base md:text-lg">
+                  {t.homepage.partners.items[1].name}
+                </h4>
+                <p className="text-gray-600 font-medium text-sm md:text-base">
+                  {t.homepage.partners.items[1].role}
+                </p>
               </div>
 
               <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-gray-100 text-center">
-                <Image
-                  src="/placeholder.svg?height=80&width=120"
-                  alt="Russell Group Universities"
-                  width={120}
-                  height={80}
-                  className="mx-auto mb-4 md:mb-6"
-                />
+                <div className="w-[220px] h-[220px] mx-auto mb-4 md:mb-6 flex items-center justify-center">
+                  <Image
+                    src="/russell-group.png"
+                    alt="Russell Group Universities"
+                    width={220}
+                    height={220}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
                 <h4 className="font-bold text-[#032445] mb-2 md:mb-3 text-base md:text-lg">
                   {t.homepage.partners.items[2].name}
                 </h4>
-                <p className="text-gray-600 font-medium text-sm md:text-base">{t.homepage.partners.items[2].role}</p>
+                <p className="text-gray-600 font-medium text-sm md:text-base">
+                  {t.homepage.partners.items[2].role}
+                </p>
               </div>
             </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <h3 className="text-2xl md:text-3xl font-bold text-[#032445] mb-6 md:mb-8">{t.about.title}</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#032445] mb-6 md:mb-8">
+                {t.about.title}
+              </h3>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
                 {t.homepage.aboutDescription1}
               </p>
@@ -156,7 +181,7 @@ export default function HomePage() {
             </div>
             <div className="order-1 lg:order-2">
               <Image
-                src="/happy-student.jpg"
+                src="/student-2.jpg"
                 alt="Happy Student"
                 width={600}
                 height={500}
@@ -168,44 +193,52 @@ export default function HomePage() {
       </section>
 
       {/* Partners Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#032445] mb-8 sm:mb-12">
-            {t.schools.title}
-          </h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#032445] mb-4">
+              {t.schools.title}
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#D29D33] to-[#b8851f] mx-auto rounded-full mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Partnering with world-class institutions to shape your future
+            </p>
+          </div>
 
           <div className="relative">
             {/* Desktop: Horizontal scroll */}
             <div className="hidden md:block">
               <button
                 onClick={() => {
-                  const container = document.getElementById("partners-container")
+                  const container =
+                    document.getElementById("partners-container");
                   if (container) {
-                    const scrollAmount = 320
+                    const scrollAmount = 320;
                     container.scrollBy({
                       left: -scrollAmount,
                       behavior: "smooth",
-                    })
+                    });
                   }
                 }}
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-12 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow z-10"
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-12 bg-gradient-to-r from-[#D29D33] to-[#b8851f] text-white rounded-full p-3 hover:shadow-lg hover:scale-105 transition-all duration-300 z-10"
               >
-                <ChevronLeft className="h-6 w-6 text-[#032445]" />
+                <ChevronLeft className="h-6 w-6" />
               </button>
               <button
                 onClick={() => {
-                  const container = document.getElementById("partners-container")
+                  const container =
+                    document.getElementById("partners-container");
                   if (container) {
-                    const scrollAmount = 320
+                    const scrollAmount = 320;
                     container.scrollBy({
                       left: scrollAmount,
                       behavior: "smooth",
-                    })
+                    });
                   }
                 }}
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-12 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow z-10"
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-12 bg-gradient-to-r from-[#D29D33] to-[#b8851f] text-white rounded-full p-3 hover:shadow-lg hover:scale-105 transition-all duration-300 z-10"
               >
-                <ChevronRight className="h-6 w-6 text-[#032445]" />
+                <ChevronRight className="h-6 w-6" />
               </button>
 
               <div
@@ -216,44 +249,60 @@ export default function HomePage() {
                 {t.schools.items.map((school, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 w-80 relative overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 rounded-xl group"
+                    className="flex-shrink-0 w-72 bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-[#D29D33]/30 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl group"
                   >
-                    <Image
-                      src={school.image || "/placeholder.svg"}
-                      alt={school.name}
-                      width={400}
-                      height={300}
-                      className="w-full h-48 object-cover object-center rounded-xl"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-xl">
-                      <h3 className="text-xl font-bold text-white mb-2">{school.name}</h3>
-                      <p className="text-white/90">{school.location}</p>
+                    <div className="h-40 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center relative">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <Image
+                        src={school.image || "/placeholder.svg"}
+                        alt={school.name}
+                        width={280}
+                        height={160}
+                        className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </div>
+                    <div className="p-5 bg-gradient-to-br from-white to-gray-50/50">
+                      <h3 className="text-lg font-bold text-[#032445] mb-2 group-hover:text-[#D29D33] transition-colors duration-300">
+                        {school.name}
+                      </h3>
+                      <p className="text-gray-600 font-medium text-sm flex items-center">
+                        <Globe className="h-4 w-4 mr-2 text-[#D29D33]" />
+                        {school.location}
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Mobile: Carousel with 2 items per slide */}
+            {/* Mobile: Enhanced grid */}
             <div className="md:hidden">
               <div className="relative">
-                <div className="overflow-hidden rounded-xl">
-                  <div className="grid grid-cols-2 gap-3 px-8">
+                <div className="overflow-hidden">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4">
                     {t.schools.items.map((school, index) => (
                       <div
                         key={index}
-                        className="relative overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 rounded-lg group"
+                        className="bg-white rounded-xl overflow-hidden border border-gray-100 hover:border-[#D29D33]/30 transition-all duration-300 hover:shadow-lg group"
                       >
-                        <Image
-                          src={school.image || "/placeholder.svg"}
-                          alt={school.name}
-                          width={300}
-                          height={200}
-                          className="w-full h-32 sm:h-40 object-cover object-center rounded-lg"
-                        />
-                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-b-lg">
-                          <h3 className="text-sm sm:text-base font-bold text-white mb-1">{school.name}</h3>
-                          <p className="text-xs sm:text-sm text-white/90">{school.location}</p>
+                        <div className="h-32 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center relative">
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                          <Image
+                            src={school.image || "/placeholder.svg"}
+                            alt={school.name}
+                            width={200}
+                            height={128}
+                            className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                          />
+                        </div>
+                        <div className="p-4 bg-gradient-to-br from-white to-gray-50/30">
+                          <h3 className="text-base font-bold text-[#032445] mb-1 group-hover:text-[#D29D33] transition-colors duration-300">
+                            {school.name}
+                          </h3>
+                          <p className="text-gray-600 font-medium text-xs flex items-center">
+                            <Globe className="h-3 w-3 mr-1 text-[#D29D33]" />
+                            {school.location}
+                          </p>
                         </div>
                       </div>
                     ))}
@@ -265,6 +314,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Leadership Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-[#032445] mb-12 md:mb-16">
@@ -282,20 +332,25 @@ export default function HomePage() {
                     className="rounded-2xl shadow-lg mx-auto w-full h-auto"
                   />
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-[#032445] mb-3 md:mb-4">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm md:text-base">{item.description}</p>
+                <h3 className="text-lg md:text-xl font-bold text-[#032445] mb-3 md:mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Inspiration Section */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
             <div className="order-2 lg:order-1">
               <Image
-                src="/student-studying.jpg"
+                src="/student-1.jpg"
                 alt="Student Studying"
                 width={600}
                 height={500}
@@ -303,7 +358,9 @@ export default function HomePage() {
               />
             </div>
             <div className="order-1 lg:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#032445] mb-6 md:mb-8">{t.inspiration.title}</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#032445] mb-6 md:mb-8">
+                {t.inspiration.title}
+              </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
                 {t.inspiration.description}
               </p>
@@ -330,7 +387,9 @@ export default function HomePage() {
                     <div className="w-10 h-10 bg-[#D29D33] rounded-lg flex items-center justify-center flex-shrink-0">
                       <feature.icon className="h-5 w-5 text-white" />
                     </div>
-                    <span className="text-gray-700 font-medium text-sm md:text-base">{feature.text}</span>
+                    <span className="text-gray-700 font-medium text-sm md:text-base">
+                      {feature.text}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -346,7 +405,9 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">{t.testimonials.title}</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t.testimonials.subtitle}</p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              {t.testimonials.subtitle}
+            </p>
           </div>
 
           <div className="relative">
@@ -362,7 +423,9 @@ export default function HomePage() {
               <div className="max-w-4xl mx-auto px-16">
                 <div
                   className={`transition-all duration-500 ease-in-out ${
-                    isTransitioning ? "opacity-0 transform translate-y-8" : "opacity-100 transform translate-y-0"
+                    isTransitioning
+                      ? "opacity-0 transform translate-y-8"
+                      : "opacity-100 transform translate-y-0"
                   }`}
                 >
                   <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/10">
@@ -370,8 +433,13 @@ export default function HomePage() {
                       <div className="relative mb-8">
                         <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white/20">
                           <Image
-                            src={t.testimonials.items[currentTestimonialIndex].image || "/placeholder.svg?height=96&width=96"}
-                            alt={t.testimonials.items[currentTestimonialIndex].name}
+                            src={
+                              t.testimonials.items[currentTestimonialIndex]
+                                .image
+                            }
+                            alt={
+                              t.testimonials.items[currentTestimonialIndex].name
+                            }
                             width={96}
                             height={96}
                             className="w-full h-full object-cover"
@@ -383,13 +451,20 @@ export default function HomePage() {
                       </div>
 
                       <blockquote className="text-xl md:text-2xl leading-relaxed mb-8 font-light italic">
-                        &ldquo;{t.testimonials.items[currentTestimonialIndex].quote}&rdquo;
+                        &ldquo;
+                        {t.testimonials.items[currentTestimonialIndex].quote}
+                        &rdquo;
                       </blockquote>
 
                       <div className="space-y-2">
-                        <h4 className="text-xl font-bold text-white">{t.testimonials.items[currentTestimonialIndex].name}</h4>
+                        <h4 className="text-xl font-bold text-white">
+                          {t.testimonials.items[currentTestimonialIndex].name}
+                        </h4>
                         <p className="text-[#D29D33] font-medium text-lg">
-                          {t.testimonials.items[currentTestimonialIndex].university}
+                          {
+                            t.testimonials.items[currentTestimonialIndex]
+                              .university
+                          }
                         </p>
                       </div>
                     </div>
@@ -412,7 +487,9 @@ export default function HomePage() {
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentTestimonialIndex ? "bg-[#D29D33] scale-125" : "bg-white/30 hover:bg-white/50"
+                    index === currentTestimonialIndex
+                      ? "bg-[#D29D33] scale-125"
+                      : "bg-white/30 hover:bg-white/50"
                   }`}
                 />
               ))}
@@ -429,5 +506,5 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
