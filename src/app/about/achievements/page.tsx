@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/contexts/LanguageContext"
 import { SITE_CONTENT } from "@/lib/content"
+import { PLACEHOLDER_IMAGES } from "@/lib/images"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Trophy, GraduationCap, Award, Star, Target, ChevronLeft, ChevronRight } from "lucide-react"
@@ -18,42 +19,42 @@ export default function AchievementsPage() {
       university: "University of Oxford",
       program: language === "tr" ? "Tıp Fakültesi" : "Medical School",
       year: "2024",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
+      image: PLACEHOLDER_IMAGES.successStories,
     },
     {
       name: "Mehmet Kaya",
       university: "University of Cambridge",
       program: language === "tr" ? "Mühendislik" : "Engineering",
       year: "2024",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+      image: PLACEHOLDER_IMAGES.successStories,
     },
     {
       name: "Zeynep Özkan",
       university: "Imperial College London",
       program: language === "tr" ? "Bilgisayar Bilimleri" : "Computer Science",
       year: "2023",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+      image: PLACEHOLDER_IMAGES.successStories,
     },
     {
       name: "Ali Yılmaz",
       university: "London School of Economics",
       program: language === "tr" ? "Ekonomi" : "Economics",
       year: "2024",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+      image: PLACEHOLDER_IMAGES.successStories,
     },
     {
       name: "Elif Şahin",
       university: "King's College London",
       program: language === "tr" ? "Hukuk" : "Law",
       year: "2023",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face",
+      image: PLACEHOLDER_IMAGES.successStories,
     },
     {
       name: "Can Özdemir",
       university: "University College London",
       program: language === "tr" ? "Mimarlık" : "Architecture",
       year: "2024",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+      image: PLACEHOLDER_IMAGES.successStories,
     },
   ]
 
