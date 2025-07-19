@@ -41,7 +41,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <section className="py-24 bg-gradient-to-br from-[#032445] to-[#0a3a5c]">
+      <section className="py-20 bg-gradient-to-br from-[#032445] to-[#041f35]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold text-white mb-8">
             {content.title}

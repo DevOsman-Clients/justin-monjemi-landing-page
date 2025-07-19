@@ -29,7 +29,7 @@ export default function ServicesPage() {
     title: service.title,
     description: service.description,
     features: service.features,
-    image: "/placeholder.svg?height=300&width=400",
+    image: service.image
   }));
 
   const processSteps = t.services.processSteps.map((step, index) => ({
@@ -59,7 +59,6 @@ export default function ServicesPage() {
             {services.map((service, index) => {
               const Icon = service.icon;
               const isEven = index % 2 === 0;
-
               return (
                 <div
                   key={index}
@@ -102,7 +101,7 @@ export default function ServicesPage() {
                   <div className={isEven ? "lg:order-2" : "lg:order-1"}>
                     <div className="relative">
                       <Image
-                        src={service.image || "/placeholder.svg"}
+                        src={service.image}
                         alt={service.title}
                         width={500}
                         height={400}

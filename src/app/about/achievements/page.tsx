@@ -328,6 +328,7 @@ export default function AchievementsPage() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }

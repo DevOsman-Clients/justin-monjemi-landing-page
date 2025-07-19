@@ -124,57 +124,68 @@ Gelecek, cesur adımlar atanların olacaktır.`,
       title: "INSPIRE - Mükemmelliğe Giden Yolunuz",
       subtitle: "Her harfi anlamlı ve net bir hizmet dizisi",
       pageTitle: "Hizmetlerimiz",
-      pageSubtitle: "İngiltere'de eğitim hayalinizi gerçekleştirmek için ihtiyacınız olan tüm hizmetleri sunuyoruz",
+      pageSubtitle:
+        "İngiltere'de eğitim hayalinizi gerçekleştirmek için ihtiyacınız olan tüm hizmetleri sunuyoruz",
       serviceList: [
         {
           title: "Üniversite Başvuru Danışmanlığı",
-          description: "İngiltere'nin en prestijli üniversitelerine başvuru sürecinizde profesyonel rehberlik alın.",
+          description:
+            "İngiltere'nin en prestijli üniversitelerine başvuru sürecinizde profesyonel rehberlik alın.",
           features: [
             "Kişisel başvuru stratejisi",
             "Üniversite seçimi rehberliği",
             "Başvuru belgelerinin hazırlanması",
             "Mülakat hazırlığı",
           ],
+          image: "/service-1.jpg",
         },
         {
           title: "Vize ve Belge İşlemleri",
-          description: "Öğrenci vizesi ve tüm resmi belge işlemlerinizi güvenle tamamlayın.",
+          description:
+            "Öğrenci vizesi ve tüm resmi belge işlemlerinizi güvenle tamamlayın.",
           features: [
             "Öğrenci vizesi başvurusu",
             "Belge çevirisi ve onaylatma",
             "Mali durum belgesi hazırlığı",
             "Sağlık sigortası düzenlemeleri",
           ],
+          image: "/service-2.jpg",
         },
         {
           title: "Akademik Hazırlık Programları",
-          description: "İngilizce yeterlilik ve akademik becerilerinizi geliştirin.",
+          description:
+            "İngilizce yeterlilik ve akademik becerilerinizi geliştirin.",
           features: [
             "IELTS/TOEFL hazırlık kursları",
             "Akademik yazım teknikleri",
             "Sunum becerileri geliştirme",
             "Araştırma metodolojisi",
           ],
+          image: "/service-3.jpg",
         },
         {
           title: "Konaklama ve Yaşam Desteği",
-          description: "İngiltere'deki yaşamınızı kolaylaştıracak kapsamlı destek hizmetleri.",
+          description:
+            "İngiltere'deki yaşamınızı kolaylaştıracak kapsamlı destek hizmetleri.",
           features: [
             "Konaklama seçenekleri rehberliği",
             "Havaalanı karşılama hizmeti",
             "Banka hesabı açma desteği",
             "Yerel yaşam oryantasyonu",
           ],
+          image: "/service-4.jpg",
         },
       ],
       processSteps: [
         {
           title: "Hedef Belirleme",
-          description: "Akademik hedeflerinizi ve kariyer planlarınızı belirleyin",
+          description:
+            "Akademik hedeflerinizi ve kariyer planlarınızı belirleyin",
         },
         {
           title: "Program Seçimi",
-          description: "Size en uygun üniversite ve program seçeneklerini keşfedin",
+          description:
+            "Size en uygun üniversite ve program seçeneklerini keşfedin",
         },
         {
           title: "Başvuru Süreci",
@@ -182,64 +193,19 @@ Gelecek, cesur adımlar atanların olacaktır.`,
         },
         {
           title: "Kabul ve Hazırlık",
-          description: "Kabul aldıktan sonra İngiltere'ye gitme hazırlıklarınızı yapın",
+          description:
+            "Kabul aldıktan sonra İngiltere'ye gitme hazırlıklarınızı yapın",
         },
       ],
       processTitle: "Süreç Nasıl İşliyor?",
-      processSubtitle: "Başvurudan kabule kadar olan süreçte size rehberlik ediyoruz",
+      processSubtitle:
+        "Başvurudan kabule kadar olan süreçte size rehberlik ediyoruz",
       whyChooseTitle: "Neden Bizi Seçmelisiniz?",
       whyChooseDescription:
         "15 yıllık deneyimimiz ve binlerce başarılı öğrenci hikayemizle, İngiltere'de eğitim hayalinizi gerçekleştirmenin en güvenilir yolu biziz.",
       applyNow: "Başvuru Yap",
       applyImmediately: "Hemen Başvur",
       getFreeConsultation: "Ücretsiz Danışmanlık Al",
-      items: [
-        {
-          letter: "I",
-          title: "İlgiye Özel Koçluk",
-          description: "Her öğrencinin eşsiz potansiyelini ortaya çıkaracak, kişiye özel rehberlik ve mentorluk.",
-          details:
-            "Deneyimli eğitim koçlarımız, her öğrencinin bireysel ihtiyaçlarını analiz ederek özel gelişim planları hazırlar.",
-        },
-        {
-          letter: "N",
-          title: "Noktayı Doğru Seçimlerde Buluşma",
-          description: "Hedeflerinize en uygun üniversite ve program seçiminde uzman destek.",
-          details:
-            "Russell Group üniversiteleri dahil 150+ eğitim kurumu ile iş birliğimiz sayesinde size en uygun seçenekleri sunarız.",
-        },
-        {
-          letter: "S",
-          title: "Sınav ve Dil Hazırlığı",
-          description: "Başarıya ulaşmanız için kapsamlı dil ve akademik sınav hazırlık programları.",
-          details: "IELTS, TOEFL, Cambridge sınavları ve üniversite giriş sınavları için profesyonel hazırlık desteği.",
-        },
-        {
-          letter: "P",
-          title: "Pasaport ve Vize İşlemleri",
-          description: "UKVI standartlarına uygun, sorunsuz vize danışmanlığı ve başvuru süreci yönetimi.",
-          details: "UK Visas and Immigration onaylı danışmanlarımız ile %98 başarı oranında vize süreçleri.",
-        },
-        {
-          letter: "I",
-          title: "İdeal Konaklama ve Yaşam Desteği",
-          description: "Yurt dışındaki geçişinizi kolaylaştıracak güvenli ve konforlu konaklama çözümleri.",
-          details: "Host family, üniversite yurtları ve özel konaklama seçenekleri ile güvenli yaşam alanları.",
-        },
-        {
-          letter: "R",
-          title: "Rehberlik ile Burs ve Finansal Destek",
-          description:
-            "Burs ve finansal destek fırsatlarını en verimli şekilde değerlendirmeniz için stratejik danışmanlık.",
-          details: "Yıllık £50,000'a kadar burs imkanları ve finansal planlama desteği.",
-        },
-        {
-          letter: "E",
-          title: "Eğitim Sonrası Kariyer Planlama",
-          description: "Mezuniyet sonrası profesyonel hayatınıza ışık tutacak kariyer mentorluk hizmetleri.",
-          details: "Graduate visa, iş bulma desteği ve uzun vadeli kariyer planlama rehberliği.",
-        },
-      ],
     },
     contact: {
       title: "Bilgi Talep Formu",
@@ -343,7 +309,8 @@ Gelecek, cesur adımlar atanların olacaktır.`,
     },
     testimonials: {
       title: "Başarı Hikayeleri",
-      subtitle: "İngiltere'nin en iyi üniversitelerine kabul alan öğrencilerimizden dinleyin",
+      subtitle:
+        "İngiltere'nin en iyi üniversitelerine kabul alan öğrencilerimizden dinleyin",
       items: [
         {
           name: "Ayşe Demir",
@@ -371,7 +338,8 @@ Gelecek, cesur adımlar atanların olacaktır.`,
     footer: {
       quickLinks: "Hızlı Bağlantılar",
       contact: "İletişim",
-      description: "İngiltere'nin en prestijli eğitim kurumlarına giden yolda güvenilir rehberiniz.",
+      description:
+        "İngiltere'nin en prestijli eğitim kurumlarına giden yolda güvenilir rehberiniz.",
       copyright: "Tüm hakları saklıdır.",
     },
     application: {
@@ -393,7 +361,8 @@ Gelecek, cesur adımlar atanların olacaktır.`,
       previousUKExperience: "Daha önce İngiltere'de eğitim aldım",
       scholarshipInterest: "Burs imkanları hakkında bilgi almak istiyorum",
       additionalInfo: "Ek Bilgiler",
-      termsAccepted: "Kullanım şartlarını ve gizlilik politikasını okudum ve kabul ediyorum",
+      termsAccepted:
+        "Kullanım şartlarını ve gizlilik politikasını okudum ve kabul ediyorum",
       marketingConsent: "Pazarlama e-postaları almayı kabul ediyorum",
       selectNationality: "Uyruğunuzu seçin",
       selectEducation: "Eğitim durumunuzu seçin",
@@ -562,7 +531,8 @@ The future belongs to those who dare to take brave steps.`,
       title: "INSPIRE - Your Pathway to Excellence",
       subtitle: "Each letter meaningful and clear",
       pageTitle: "Our Services",
-      pageSubtitle: "We provide all the services you need to realize your dream of studying in the UK",
+      pageSubtitle:
+        "We provide all the services you need to realize your dream of studying in the UK",
       serviceList: [
         {
           title: "University Application Consulting",
@@ -574,16 +544,19 @@ The future belongs to those who dare to take brave steps.`,
             "Application document preparation",
             "Interview preparation",
           ],
+          image: "/service-1.jpg",
         },
         {
           title: "Visa and Document Processing",
-          description: "Complete your student visa and all official document processes with confidence.",
+          description:
+            "Complete your student visa and all official document processes with confidence.",
           features: [
             "Student visa application",
             "Document translation and certification",
             "Financial statement preparation",
             "Health insurance arrangements",
           ],
+          image: "/service-2.jpg",
         },
         {
           title: "Academic Preparation Programs",
@@ -594,16 +567,19 @@ The future belongs to those who dare to take brave steps.`,
             "Presentation skills development",
             "Research methodology",
           ],
+          image: "/service-3.jpg",
         },
         {
           title: "Accommodation and Living Support",
-          description: "Comprehensive support services to make your life in the UK easier.",
+          description:
+            "Comprehensive support services to make your life in the UK easier.",
           features: [
             "Accommodation options guidance",
             "Airport pickup service",
             "Bank account opening support",
             "Local life orientation",
           ],
+          image: "/service-4.jpg",
         },
       ],
       processSteps: [
@@ -613,19 +589,23 @@ The future belongs to those who dare to take brave steps.`,
         },
         {
           title: "Program Selection",
-          description: "Discover the most suitable university and program options for you",
+          description:
+            "Discover the most suitable university and program options for you",
         },
         {
           title: "Application Process",
-          description: "Complete your application process with professional guidance",
+          description:
+            "Complete your application process with professional guidance",
         },
         {
           title: "Acceptance and Preparation",
-          description: "Prepare for your journey to the UK after receiving acceptance",
+          description:
+            "Prepare for your journey to the UK after receiving acceptance",
         },
       ],
       processTitle: "How Does the Process Work?",
-      processSubtitle: "We guide you through the entire process from application to acceptance",
+      processSubtitle:
+        "We guide you through the entire process from application to acceptance",
       whyChooseTitle: "Why Choose Us?",
       whyChooseDescription:
         "With our 15 years of experience and thousands of successful student stories, we are the most reliable way to realize your dream of studying in the UK.",
@@ -636,47 +616,58 @@ The future belongs to those who dare to take brave steps.`,
         {
           letter: "I",
           title: "Individualised Coaching",
-          description: "Tailored mentorship and guidance designed to unlock each student's unique potential.",
+          description:
+            "Tailored mentorship and guidance designed to unlock each student's unique potential.",
           details:
             "Our experienced educational coaches analyze each student's individual needs to create personalized development plans.",
         },
         {
           letter: "N",
           title: "Navigating University Choices",
-          description: "Expert support in selecting the ideal university and programme aligned with your goals.",
+          description:
+            "Expert support in selecting the ideal university and programme aligned with your goals.",
           details:
             "With partnerships across 150+ institutions including Russell Group universities, we offer you the best options.",
         },
         {
           letter: "S",
           title: "Skill & Exam Preparation",
-          description: "Comprehensive language and academic exam training to ensure your success.",
-          details: "Professional preparation support for IELTS, TOEFL, Cambridge exams, and university entrance tests.",
+          description:
+            "Comprehensive language and academic exam training to ensure your success.",
+          details:
+            "Professional preparation support for IELTS, TOEFL, Cambridge exams, and university entrance tests.",
         },
         {
           letter: "P",
           title: "Processing Visa Applications",
-          description: "Seamless visa consultancy and application management adhering to UKVI standards.",
-          details: "98% success rate in visa processes with our UK Visas and Immigration approved consultants.",
+          description:
+            "Seamless visa consultancy and application management adhering to UKVI standards.",
+          details:
+            "98% success rate in visa processes with our UK Visas and Immigration approved consultants.",
         },
         {
           letter: "I",
           title: "Immersive Accommodation Support",
-          description: "Safe and comfortable housing solutions to foster a smooth transition abroad.",
+          description:
+            "Safe and comfortable housing solutions to foster a smooth transition abroad.",
           details:
             "Secure living arrangements through host families, university halls, and private accommodation options.",
         },
         {
           letter: "R",
           title: "Researching Scholarships & Funding",
-          description: "Strategic advice to maximise financial aid and scholarship opportunities.",
-          details: "Scholarship opportunities up to £50,000 annually with comprehensive financial planning support.",
+          description:
+            "Strategic advice to maximise financial aid and scholarship opportunities.",
+          details:
+            "Scholarship opportunities up to £50,000 annually with comprehensive financial planning support.",
         },
         {
           letter: "E",
           title: "Employment & Career Planning",
-          description: "Forward-looking career mentoring, from graduation through professional life.",
-          details: "Graduate visa support, job placement assistance, and long-term career planning guidance.",
+          description:
+            "Forward-looking career mentoring, from graduation through professional life.",
+          details:
+            "Graduate visa support, job placement assistance, and long-term career planning guidance.",
         },
       ],
     },
@@ -746,7 +737,7 @@ The future belongs to those who dare to take brave steps.`,
           name: "University College London",
           location: "London",
           image: "/ucl-logo.jpg",
-        }
+        },
       ],
     },
     leadership: {
@@ -760,7 +751,7 @@ The future belongs to those who dare to take brave steps.`,
         {
           title: "Personal Development",
           description: "Personalized guidance program for each student",
-          image: "/pic-2.jpg", 
+          image: "/pic-2.jpg",
         },
         {
           title: "Career Guidance",
@@ -771,7 +762,8 @@ The future belongs to those who dare to take brave steps.`,
     },
     inspiration: {
       title: "Inspiring the Next Generation",
-      description: "We offer personalized approaches to discover and develop each student's unique potential.",
+      description:
+        "We offer personalized approaches to discover and develop each student's unique potential.",
       features: [
         "Personalized education plans",
         "Expert academic consultancy",
@@ -781,7 +773,8 @@ The future belongs to those who dare to take brave steps.`,
     },
     testimonials: {
       title: "Success Stories",
-      subtitle: "Hear from our students who have achieved their dreams of studying at top UK universities",
+      subtitle:
+        "Hear from our students who have achieved their dreams of studying at top UK universities",
       items: [
         {
           name: "Ayşe Demir",
@@ -809,7 +802,8 @@ The future belongs to those who dare to take brave steps.`,
     footer: {
       quickLinks: "Quick Links",
       contact: "Contact",
-      description: "Your trusted guide to the UK's most prestigious educational institutions.",
+      description:
+        "Your trusted guide to the UK's most prestigious educational institutions.",
       copyright: "All rights reserved.",
     },
     application: {
@@ -831,7 +825,8 @@ The future belongs to those who dare to take brave steps.`,
       previousUKExperience: "I have previously studied in the UK",
       scholarshipInterest: "I'm interested in scholarship opportunities",
       additionalInfo: "Additional Information",
-      termsAccepted: "I have read and accept the terms of service and privacy policy",
+      termsAccepted:
+        "I have read and accept the terms of service and privacy policy",
       marketingConsent: "I consent to receiving marketing emails",
       selectNationality: "Select your nationality",
       selectEducation: "Select your education status",
@@ -875,7 +870,7 @@ The future belongs to those who dare to take brave steps.`,
       },
     },
   },
-} as const
+} as const;
 
-export type Language = "tr" | "en"
-export type SiteContent = typeof SITE_CONTENT
+export type Language = "tr" | "en";
+export type SiteContent = typeof SITE_CONTENT;
