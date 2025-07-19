@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Justin Monajemi",
   description: "Justin Monajemi consulting services",
+  icons: {
+    icon: "/logo-light.jpg",
+  },
 };
 
 export default function RootLayout({

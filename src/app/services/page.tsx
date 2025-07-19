@@ -164,9 +164,9 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-[#032445] text-white">
+      <section className="py-20 bg-[#D29D33] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Clock className="h-16 w-16 text-[#D29D33] mx-auto mb-8" />
+          <Clock className="h-16 w-16 text-[#032445] mx-auto mb-8" />
           <h2 className="text-3xl font-bold mb-6">
             {t.services.whyChooseTitle}
           </h2>
@@ -175,7 +175,7 @@ export default function ServicesPage() {
           </p>
           <Button
             onClick={() => setIsModalOpen(true)}
-            className="bg-white text-[#032445] hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg"
+            className="bg-[#032445] hover:bg-[#041f35] text-white px-8 py-4 rounded-lg font-semibold text-lg"
           >
             {t.services.getFreeConsultation}
           </Button>

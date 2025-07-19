@@ -13,12 +13,13 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 export default function AchievementsPage() {
   const { language } = useLanguage();
   const content = SITE_CONTENT[language];
   const [currentStoryIndex, setCurrentStoryIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const successStories = [
     {
@@ -26,48 +27,42 @@ export default function AchievementsPage() {
       university: "University of Oxford",
       program: language === "tr" ? "Tıp Fakültesi" : "Medical School",
       year: "2024",
-      image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
+      image: "/student-1-testimonial.jpg",
     },
     {
       name: "Mehmet Kaya",
       university: "University of Cambridge",
       program: language === "tr" ? "Mühendislik" : "Engineering",
       year: "2024",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+      image: "/student-2-testimonial.jpg",
     },
     {
       name: "Zeynep Özkan",
       university: "Imperial College London",
       program: language === "tr" ? "Bilgisayar Bilimleri" : "Computer Science",
       year: "2023",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+      image: "/student-3-testimonial.jpg",
     },
     {
       name: "Ali Yılmaz",
       university: "London School of Economics",
       program: language === "tr" ? "Ekonomi" : "Economics",
       year: "2024",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+      image: "/student-1-testimonial.jpg",
     },
     {
       name: "Elif Şahin",
       university: "King's College London",
       program: language === "tr" ? "Hukuk" : "Law",
       year: "2023",
-      image:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face",
+      image: "/student-2-testimonial.jpg",
     },
     {
       name: "Can Özdemir",
       university: "University College London",
       program: language === "tr" ? "Mimarlık" : "Architecture",
       year: "2024",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+      image: "/student-3-testimonial.jpg",
     },
   ];
 
@@ -110,25 +105,42 @@ export default function AchievementsPage() {
     },
   ];
 
-  const nextStory = () => {
-    setCurrentStoryIndex((prev) => (prev + 3) % successStories.length);
-  };
+  const nextStory = useCallback(() => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentStoryIndex((prev) => (prev + 1) % successStories.length);
+      setIsTransitioning(false);
+    }, 300);
+  }, [isTransitioning, successStories.length]);
 
   const prevStory = () => {
-    setCurrentStoryIndex(
-      (prev) => (prev - 3 + successStories.length) % successStories.length
-    );
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentStoryIndex(
+        (prev) => (prev - 1 + successStories.length) % successStories.length
+      );
+      setIsTransitioning(false);
+    }, 300);
   };
 
-  const getVisibleStories = () => {
-    const stories = [];
-    for (let i = 0; i < 3; i++) {
-      stories.push(
-        successStories[(currentStoryIndex + i) % successStories.length]
-      );
-    }
-    return stories;
+  const goToSlide = (index: number) => {
+    if (isTransitioning || index === currentStoryIndex) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentStoryIndex(index);
+      setIsTransitioning(false);
+    }, 300);
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextStory();
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [nextStory]);
 
   return (
     <div className="min-h-screen bg-white">
@@ -207,132 +219,111 @@ export default function AchievementsPage() {
       </section>
 
       {/* Success Stories Carousel */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-[#032445] mb-16">
-            {language === "tr" ? "Başarı Hikayeleri" : "Success Stories"}
-          </h2>
+      <section className="py-20 bg-[#032445] text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#032445] to-[#041f35] opacity-90"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              {language === "tr" ? "Başarı Hikayeleri" : "Success Stories"}
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              {language === "tr"
+                ? "Hayallerini gerçekleştiren öğrencilerimizin ilham verici hikayeleri"
+                : "Inspiring stories of our students who achieved their dreams"}
+            </p>
+          </div>
 
           <div className="relative">
-            {/* Navigation Arrows */}
-            <button
-              onClick={prevStory}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-12 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow z-10 hidden md:block"
-            >
-              <ChevronLeft className="h-6 w-6 text-[#032445]" />
-            </button>
-            <button
-              onClick={nextStory}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-12 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow z-10 hidden md:block"
-            >
-              <ChevronRight className="h-6 w-6 text-[#032445]" />
-            </button>
-
-            {/* Stories Grid */}
-            <div className="grid md:grid-cols-3 gap-8">
-              {getVisibleStories().map((story, index) => (
-                <Card
-                  key={`${story.name}-${currentStoryIndex}-${index}`}
-                  className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="relative h-48">
-                    <Image
-                      src={story.image || "/placeholder.svg"}
-                      alt={story.name}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute top-4 right-4 bg-[#D29D33] text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      {story.year}
-                    </div>
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-[#032445] mb-2">
-                      {story.name}
-                    </h3>
-                    <p className="text-[#D29D33] font-semibold mb-1">
-                      {story.university}
-                    </p>
-                    <p className="text-gray-600 mb-3">{story.program}</p>
-                    <div className="flex items-center space-x-2">
-                      <Star className="h-4 w-4 text-[#D29D33]" />
-                      <span className="text-sm font-semibold text-[#032445]">
-                        {language === "tr"
-                          ? "Başarılı Kabul"
-                          : "Successful Admission"}
-                      </span>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            {/* Mobile Navigation */}
-            <div className="flex justify-center mt-8 space-x-4 md:hidden">
+            <div className="flex items-center justify-center">
               <button
                 onClick={prevStory}
-                className="bg-[#D29D33] text-white rounded-full p-2 hover:bg-[#b8851f] transition-colors"
+                disabled={isTransitioning}
+                className="absolute left-0 z-10 bg-white/10 backdrop-blur-sm rounded-full p-4 hover:bg-white/20 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <ChevronLeft className="h-5 w-5" />
+                <ChevronLeft className="h-6 w-6" />
               </button>
+
+              <div className="max-w-4xl mx-auto px-16">
+                <div
+                  className={`transition-all duration-500 ease-in-out ${
+                    isTransitioning
+                      ? "opacity-0 transform translate-y-8"
+                      : "opacity-100 transform translate-y-0"
+                  }`}
+                >
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/10">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="relative mb-8">
+                        <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white/20">
+                          <Image
+                            src={successStories[currentStoryIndex].image}
+                            alt={successStories[currentStoryIndex].name}
+                            width={96}
+                            height={96}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="absolute -top-2 -right-2 bg-[#D29D33] rounded-full p-2">
+                          <Star className="h-4 w-4 text-white" />
+                        </div>
+                      </div>
+
+                      <div className="space-y-4 mb-8">
+                        <h4 className="text-2xl font-bold text-white">
+                          {successStories[currentStoryIndex].name}
+                        </h4>
+                        <p className="text-[#D29D33] font-semibold text-xl">
+                          {successStories[currentStoryIndex].university}
+                        </p>
+                        <p className="text-lg text-gray-300">
+                          {successStories[currentStoryIndex].program}
+                        </p>
+                        <div className="flex items-center justify-center space-x-2">
+                          <div className="bg-[#D29D33] text-white px-4 py-2 rounded-full text-sm font-semibold">
+                            {successStories[currentStoryIndex].year}
+                          </div>
+                          <span className="text-sm font-semibold text-white">
+                            {language === "tr"
+                              ? "Başarılı Kabul"
+                              : "Successful Admission"}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <button
                 onClick={nextStory}
-                className="bg-[#D29D33] text-white rounded-full p-2 hover:bg-[#b8851f] transition-colors"
+                disabled={isTransitioning}
+                className="absolute right-0 z-10 bg-white/10 backdrop-blur-sm rounded-full p-4 hover:bg-white/20 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <ChevronRight className="h-5 w-5" />
+                <ChevronRight className="h-6 w-6" />
               </button>
             </div>
 
-            {/* Dots Indicator */}
-            <div className="flex justify-center mt-8 space-x-2">
-              {Array.from({ length: Math.ceil(successStories.length / 3) }).map(
-                (_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentStoryIndex(index * 3)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      Math.floor(currentStoryIndex / 3) === index
-                        ? "bg-[#D29D33]"
-                        : "bg-gray-300"
-                    }`}
-                  />
-                )
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Recognition Section */}
-      <section className="py-20 bg-[#032445]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-8">
-              {language === "tr" ? "Resmi Tanınırlık" : "Official Recognition"}
-            </h2>
-            <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
-              {language === "tr"
-                ? "İngiltere Milli Eğitim Bakanlığı, British Council ve UKVI tarafından resmi olarak tanınan ve onaylanmış danışmanlık hizmetleri sunuyoruz."
-                : "We provide officially recognized and approved consultancy services by the UK Department for Education, British Council, and UKVI."}
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-80">
-              {[
-                "UK Department for Education",
-                "British Council",
-                "UKVI Approved Agent",
-                "GDPR Compliant",
-              ].map((cert, index) => (
-                <div key={index} className="text-center">
-                  <Image
-                    src={`/placeholder.svg?height=80&width=120`}
-                    alt={cert}
-                    width={120}
-                    height={80}
-                    className="mx-auto mb-2 brightness-0 invert"
-                  />
-                  <p className="text-sm text-blue-100">{cert}</p>
-                </div>
+            <div className="flex justify-center mt-12 space-x-3">
+              {successStories.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentStoryIndex
+                      ? "bg-[#D29D33] scale-125"
+                      : "bg-white/30 hover:bg-white/50"
+                  }`}
+                />
               ))}
+            </div>
+
+            <div className="flex justify-center mt-8">
+              <div className="flex items-center space-x-4 text-sm text-gray-400">
+                <span>
+                  {currentStoryIndex + 1} of {successStories.length}
+                </span>
+              </div>
             </div>
           </div>
         </div>
