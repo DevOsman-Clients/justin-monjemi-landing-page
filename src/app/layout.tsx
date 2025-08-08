@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import WorldMapLoader from "@/components/WorldMapLoader";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -35,7 +34,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <LanguageProvider>
-          <WorldMapLoader />
           <Navbar />
           <main>{children}</main>
           <Footer />

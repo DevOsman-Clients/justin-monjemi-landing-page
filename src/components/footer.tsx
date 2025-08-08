@@ -56,8 +56,8 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">{footerContent.contact}</h4>
             <div className="space-y-2 text-gray-300">
               <p>info@justinmonajemi.com</p>
-              <p>+44 7436 771695</p>
-              <p>+90 551 453 8083</p>
+              <p>+44 20 1234 5678</p>
+              <p>+90 212 123 4567</p>
             </div>
           </div>
         </div>

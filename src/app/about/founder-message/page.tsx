@@ -92,17 +92,6 @@ export default function FounderMessagePage() {
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-gray-200 text-center">
-                  <div className="mb-4">
-                    <p className="text-sm text-gray-600 mb-2">
-                      {language === "tr" ? "İletişim:" : "Contact:"}
-                    </p>
-                    <a 
-                      href="mailto:Justin@justinmonajemi.com"
-                      className="text-[#D29D33] hover:text-[#b8851f] font-medium"
-                    >
-                      Justin@justinmonajemi.com
-                    </a>
-                  </div>
                   <p className="text-base text-gray-700 mb-3">
                     {content.signature}
                   </p>
