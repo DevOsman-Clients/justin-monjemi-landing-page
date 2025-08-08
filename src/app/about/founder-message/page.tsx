@@ -160,14 +160,6 @@ export default function FounderMessagePage() {
               ? "Bizimle başlayan her yolculuk, geleceğe atılan en güçlü adımdır."
               : "Every journey that begins with us is a bold step towards the future."}
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <button className="bg-[#032445] hover:bg-[#0a3a5c] text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-              {language === "tr" ? "Başvuru Yap" : "Apply Now"}
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-[#D29D33] px-6 py-2 rounded-lg font-semibold transition-colors">
-              {language === "tr" ? "Bilgi Al" : "Get Information"}
-            </button>
-          </div>
         </div>
       </section>
     </div>

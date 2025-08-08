@@ -1,10 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SITE_CONTENT } from "@/lib/content";
-import { Button } from "@/components/ui/button";
-import ApplicationModal from "@/components/ApplicationModal";
 import Image from "next/image";
 import {
   GraduationCap,
@@ -12,7 +9,6 @@ import {
   Users,
   Globe,
   CheckCircle,
-  ArrowRight,
   BookOpen,
   Award,
   Target,
@@ -22,7 +18,6 @@ import {
 export default function ServicesPage() {
   const { language } = useLanguage();
   const t = SITE_CONTENT[language];
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const services = t.services.serviceList.map((service, index) => ({
     icon: [GraduationCap, FileText, Users, Globe][index],
@@ -89,13 +84,6 @@ export default function ServicesPage() {
                       ))}
                     </div>
 
-                    <Button
-                      onClick={() => setIsModalOpen(true)}
-                      className="bg-[#032445] hover:bg-[#032445]/90 text-white px-8 py-4 rounded-lg font-semibold text-lg group"
-                    >
-                      {t.services.applyNow}
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    </Button>
                   </div>
 
                   <div className={isEven ? "lg:order-2" : "lg:order-1"}>
@@ -152,14 +140,6 @@ export default function ServicesPage() {
             })}
           </div>
 
-          <div className="text-center mt-16">
-            <Button
-              onClick={() => setIsModalOpen(true)}
-              className="bg-[#D29D33] hover:bg-[#b8851f] text-white px-12 py-4 rounded-lg font-semibold text-xl"
-            >
-              {t.services.applyImmediately}
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -172,19 +152,9 @@ export default function ServicesPage() {
           <p className="text-xl text-gray-200 mb-8 leading-relaxed">
             {t.services.whyChooseDescription}
           </p>
-          <Button
-            onClick={() => setIsModalOpen(true)}
-            className="bg-[#032445] hover:bg-[#041f35] text-white px-8 py-4 rounded-lg font-semibold text-lg"
-          >
-            {t.services.getFreeConsultation}
-          </Button>
         </div>
       </section>
 
-      <ApplicationModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
     </div>
   );
 }

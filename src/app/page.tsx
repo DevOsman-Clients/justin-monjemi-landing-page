@@ -9,7 +9,6 @@ import {
   Users,
   Globe,
   BookOpen,
-  ArrowRight,
   ChevronLeft,
   ChevronRight,
   Quote,
@@ -84,13 +83,6 @@ export default function HomePage() {
           <p className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed">
             {t.hero.subtitle}
           </p>
-          <Button
-            size="lg"
-            className="bg-[#D29D33] hover:bg-[#b8851f] text-white px-8 py-4 text-lg font-semibold rounded-lg"
-          >
-            {t.hero.cta}
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
         </div>
       </section>
 
@@ -175,9 +167,6 @@ export default function HomePage() {
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8 md:mb-10">
                 {t.homepage.aboutDescription2}
               </p>
-              <Button className="bg-[#D29D33] hover:bg-[#b8851f] text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold text-base md:text-lg">
-                {t.about.cta}
-              </Button>
             </div>
             <div className="order-1 lg:order-2">
               <Image

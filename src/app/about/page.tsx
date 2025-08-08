@@ -3,7 +3,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SITE_CONTENT } from "@/lib/content";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Award, Globe, BookOpen } from "lucide-react";
 
@@ -141,9 +140,6 @@ export default function AboutPage() {
                     </p>
                   ))}
               </div>
-              <Button className="bg-[#D29D33] hover:bg-[#b8851f] text-white px-8 py-3 rounded-lg mt-6">
-                {content.aboutPage.teamSection.buttonText}
-              </Button>
             </div>
             <div className="relative">
               <Image
