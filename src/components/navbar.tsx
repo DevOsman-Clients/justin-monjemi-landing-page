@@ -26,23 +26,19 @@ export default function Navbar() {
   return (
     <>
       <nav className="bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ease-in-out">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           {/* Main navbar content */}
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center">
             <div className="flex items-center">
-              <Link href="/" className="flex items-center space-x-3 group">
-                <div className="transform transition-transform duration-300 group-hover:scale-110">
+              <Link href="/">
+                <div>
                   <Image
                     src="/logo-light.jpg"
                     alt="Justin Monajemi Logo"
-                    width={40}
-                    height={40}
-                    className="rounded-full"
+                    width={200}
+                    height={200}
                   />
                 </div>
-                <span className="text-xl font-bold text-[#032445] transition-colors duration-300 group-hover:text-[#D29D33]">
-                  Justin Monajemi
-                </span>
               </Link>
             </div>
 
