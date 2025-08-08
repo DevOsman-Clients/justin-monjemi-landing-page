@@ -35,14 +35,11 @@ export default function Navbar() {
                   <Image
                     src="/logo-light.jpg"
                     alt="Justin Monajemi Logo"
-                    width={40}
-                    height={40}
+                    width={60}
+                    height={60}
                     className="rounded-full"
                   />
                 </div>
-                <span className="text-xl font-bold text-[#032445] transition-colors duration-300 group-hover:text-[#D29D33]">
-                  Justin Monajemi
-                </span>
               </Link>
             </div>
 

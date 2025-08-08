@@ -223,7 +223,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">
-                        +44 20 1234 5678
+                        +44 7436 771695
                       </p>
                       <p className="text-sm text-gray-600">UK Office</p>
                     </div>
@@ -234,7 +234,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">
-                        +90 212 123 4567
+                        +90 551 453 8083
                       </p>
                       <p className="text-sm text-gray-600">Turkey Office</p>
                     </div>
@@ -255,8 +255,16 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">
-                        {content.location}
+                        Suites 6-7 The Turvill Building, Old Swiss, 149 Cherry Hinton Road, Cambridge CB1 7BX, UK
                       </p>
+                      <a 
+                        href="https://maps.google.com/?q=Suites+6-7+The+Turvill+Building,+Old+Swiss,+149+Cherry+Hinton+Road,+Cambridge+CB1+7BX,+UK"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#D29D33] hover:text-[#b8851f] text-sm underline mt-1 inline-block"
+                      >
+                        View on Google Maps
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -270,7 +278,7 @@ export default function ContactPage() {
                   {content.whatsappSupport}
                 </p>
                 <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold">
-                  WhatsApp: +90 5XX XXX XX XX
+                  WhatsApp: +90 551 453 8083
                 </Button>
               </div>
             </div>
